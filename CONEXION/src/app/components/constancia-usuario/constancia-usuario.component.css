@@ -1,0 +1,53 @@
+
+ .ancho100 {
+     width: 100% !important;
+ }
+ 
+ .fondo {
+    background-color: rgba(26, 178, 229, 0.5);
+    /*(255, 166, 0, 0.174);*/
+    left: 20px;
+ }
+ .card{
+     background-color: rgba(230, 147, 15, 0.37);
+     /*background-color: rgba(255, 157, 0, 0.37);*/
+     color: rgb(9, 65, 133);
+     border-radius: 15px;
+     text-align: center;
+     width: 43%;
+     height: 152px;
+     margin-left: 40px !important;
+     display: inline-block;
+
+    
+}
+ 
+ #logo {
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+ }
+ 
+ .colorPrincipal {
+     background-color: rgba(255, 157, 0, 0.37);
+ }
+ 
+ .table {
+     color: rgb(7, 68, 142);
+ }
+ 
+ 
+ .titulo {
+     background-color: rgb(58, 44, 184);
+     color: white;
+     border-radius: 20px;
+     text-align: center !important;
+ }
+ 
+ .conT {
+     text-align: center !important;
+ }
+ 
+ .fa-solid {
+    color: rgba(255, 157, 0, 0.735);
+ }

@@ -1,0 +1,59 @@
+.fas{
+	cursor: pointer;
+	margin-left: 17px;
+}
+.text-danger{
+    text-align: start;
+    margin-left: 7px ;
+    font-size: 0.9rem;
+} 
+.text-warning{
+    text-align: start;
+    margin-left: 7px ;
+    font-size: 0.9rem;
+} 
+
+.media1{
+    margin: 0px;
+	background-image: url("../../../assets/img/fondo_body.jpg");
+	background: #1b6161;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1340px;
+    width: 117.5%;
+}
+
+.div-registro{
+    margin-top: 0% !important;
+}
+.div-formulario{
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+.titulo-lista{
+    text-align: center!important;
+}
+.msg-peq{
+    font-size: 0.5px;
+    color: darkgrey;
+}
+.img-log{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display:block;
+margin:auto;
+}
+
+input{
+    text-transform:uppercase;
+}
+/*Eliminar la flecha*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }

@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="row">
+        <!-- <div class="col bg"></div> -->
+        <div class="col-lg-6 mx-auto">
+            <div class="text-center">
+                <img src="../../../assets/img/logo_transparent.png" width="248"alt="" class="src">
+                <h2 class="fw-bold ">Bienvenido</h2>
+                <p class="mb-5" style="font-size: 1.3rem;">Ingrese su información para comenzar!</p>
+                <form action="" class="titulo-login" (submit)="loginIn ()">
+                    <div class="form-floating mb-3 titulo-login">
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder="name@unah.hn" [(ngModel)]="usuario.correo" required>
+                        <label for="email">Correo Institucional</label> 
+                      </div>
+                      <div class="form-floating mb-4 titulo-login" >
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" [(ngModel)]="usuario.password" required>
+                        <label for="password" name="password">Contraseña</label>
+                      </div>
+                      <div class="form-check mb-4 spam-act"  >
+                        <input class="form-check-input" type="checkbox" value="" id="conectado">
+                        <label class="form-check-label " for="conectado">
+                          Mantener la sesión activa!
+                        </label>
+                      </div>
+                      <div class="mb-3 text-center d-grid">
+                        <button type="submit" class="btn btn-lg btn-success">Iniciar Sesión</button>
+                        
+                      </div>
+                      <div class="my-3 mr-auto">
+                        <span>Olvidates tu contraseña, <a routerLink="/recuperar-cuenta" class="text-danger">click aquí!</a></span>
+                        <span>Aun no formas parte, <a href="/registrar-usuario" class="text-success">regitrate!</a></span>
+                        <br>
+                      </div>
+                      
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

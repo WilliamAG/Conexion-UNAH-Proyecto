@@ -1,0 +1,66 @@
+
+<div class="franja-amarilla container-fluid"></div>
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-4 fondo pt-5 text-center bottom" >  
+            
+          <img src="../../../assets/img/perfiles-temporal/voae.png" class="perfil-img" alt="">
+          
+          <div class="d-grid gap-2 col-6 mx-auto fondo-azul">
+            <button class="btn btn-primary btn-perfil" name="dni">BIENVENIDO</button>
+          </div>
+
+         <div class="d-grid gap-2 col-10 mx-auto div-cuerpo">
+          <a routerLink="/actividad-nueva" class="txt-enlace"><i class="fa-solid fa-plus-square icon-enlace"></i>Crear Actividad</a>
+          <a routerLink="/actividades-voae"  class="txt-enlace"><i class="fa-solid fa-handshake-angle icon-enlace"></i>Actividades</a>
+          <a href="/crear-constancia" class="txt-enlace"><i class="fa-solid fa-pencil"></i> Crear Constancias</a>
+          <a href="/listar-constanciasvoae" class="txt-enlace"><i class="fa-solid fa-certificate icon-enlace"></i>Constancias</a>
+          
+          <a href="" class="txt-enlace text-danger"><i class="fa-solid fa-exclamation icon-enlace"></i>Reportar</a>
+
+         </div>
+         
+          
+          <div class="div-cookies">
+            <span class="span-multi">Privacidad · Condiciones · Publicidad · Opciones · Cookies · FAQ-FPR · 2022</span>
+          </div>       
+          
+        </div>
+
+      <div class="derecho">
+	<h2>Actividades en ejecucion</h2>
+	<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+		<div >
+			<ul>
+			<li *ngFor="let actividad of listActividad">
+				<div class="contenedor">
+					<h3>{{actividad.nombre}}</h3>
+				<li><b>Direccion o Plataforma:</b> {{actividad.direccionPlataforma | titlecase}}</li>
+				<li><b>Encargado:</b> {{actividad.encargados}}</li>
+				<li><b>Modalidad:</b> {{actividad.modalidad | titlecase}}</li>
+				<li><b>horas voae:</b> {{actividad.horasArt}} Hras</li>  
+				<li><b>Area:</b> {{actividad.area}}</li>
+				<li><b>hora:</b> {{actividad.hora}}</li>
+				
+				<li><b>Fecha:</b> {{actividad.fecha | date}} <li>
+				
+				
+				<img src={{actividad.urlImagen}}>
+
+
+                 <div class="d-flex flex-row-reverse">
+                    <!-- Delete Button -->
+                    <button class="btn btn-danger" (click)="eliminarActividad(actividad._id!, actividad.nombre!)">Eliminar</button>
+                    <!-- Edit Button -->
+                    <button class="btn btn-primary mx-2" (click)="editarActividad(actividad._id!)">Editar</button>
+                </div>
+				</div>	
+				
+			</li>
+		</ul>
+	</div>
+
+	</cdk-virtual-scroll-viewport>
+
+	
+</div>

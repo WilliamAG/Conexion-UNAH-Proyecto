@@ -1,0 +1,63 @@
+
+ .ancho100 {
+     width: 100% !important;
+ }
+ 
+ .fondo {
+    background-color: rgba(26, 178, 229, 0.5);
+    /*(255, 166, 0, 0.174);*/
+ }
+ 
+ .card {
+     background-color: rgba(230, 147, 15, 0.37);
+     /*background-color: rgba(255, 157, 0, 0.37);*/
+     color: rgb(9, 65, 133);
+     border-radius: 15px;
+ }
+ 
+ #logo {
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+ }
+ 
+ .colorPrincipal {
+     background-color: rgba(255, 157, 0, 0.37);
+ }
+ 
+ .table {
+     color: rgb(7, 68, 142);
+ }
+ 
+ .btnEditar {
+     background-color: rgb(81, 174, 20);
+     border-radius: 20px;
+     color: white;
+ }
+ 
+ .btnEliminar {
+     background-color: rgb(239, 8, 8);
+     border-radius: 20px;
+     color: white;
+ }
+
+ .btnNueva {
+    background-color: rgb(58, 44, 184);
+    border-radius: 20px;
+    color: white;
+}
+ 
+ .titulo {
+     background-color: rgb(58, 44, 184);
+     color: white;
+     border-radius: 20px;
+     text-align: center !important;
+ }
+ 
+ .conT {
+     text-align: center !important;
+ }
+ 
+ .fa-solid {
+    color: rgba(255, 157, 0, 0.735);
+ }

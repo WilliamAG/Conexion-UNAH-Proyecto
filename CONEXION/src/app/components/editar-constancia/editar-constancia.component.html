@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/ae73128d1b.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="fondo">    
+        <main  class="container mt-0">
+            <div class="conT px-auto my-3">
+                <span class="titulo px-4 py-1"><b>EMISIÓN DE CONSTANCIAS VOAE</b></span>
+            </div>
+                <div class="card mx-5 mb-4 px-0">
+                    <div class="card-body col-12 row mx-0 px-20">
+                     <div class="col-20">
+                        <div class="col-20 row">
+
+                            <form [formGroup]="constanciaForm" (ngSubmit)="editarConstancia()" >
+
+                                <div><p align = "justify" class="fw-normal" style="line-height: 90%" >La Vicerrectoría de Orientación y Asuntos Estudiantiles de la Universidad Nacional 
+                                Autónoma de Honduras, HACE CONSTAR QUE:<br><br> <input type="text" formControlName="nombre" class="form-control" class = "col-sm-5">
+                                Estudiante de la carrera de: <input type="text" formControlName="carrera" class="form-control" class = "col-sm-4" ><br><br>
+                                Con número de cuenta: <input type="number" min="1" pattern="^[0-9]+" formControlName="cuenta" class="form-control" class=" col-sm-3" >
+                                ha participado durante su proceso 
+                                formativo en la actividad denominada <br><br><input type="text" formControlName="actividad" class="form-control" class ="col-sm-5"> ,
+                                como parte de las actividades establecidas en el Artículo 140 de las Normas<br><br> Académicas de la 
+                                UNAH; en dicho evento el (la) estudiante acumuló <input type="number" min="0" max="15" formControlName="horas" class="form-control" class=" col-sm-1"> horas
+                                cubriendo así el ámbito <input type="text" formControlName="ambito" class="form-control" class = "col-sm-2" > </p>
+
+                                <p align = "justify" class="fw-normal" style="line-height: 90%" > <br>La presente constancia se extiende conforme datos recibidos desde la unidad académica 
+                                    responsable del desarrollo de la actividad <br><br>antes descrita y para fines de trámite de graduación. </p> 
+                                </div>
+
+                        
+                            
+                                <div class="col-5 row pt-4 mx-10 px-0">
+                                    <div class="col-6 py-auto mx-0 pr-2">
+                                        <button class="btn btnImprimir ancho100 " [disabled]="constanciaForm.invalid" onclick="window.print();">IMPRIMIR</button>
+                                    </div>
+                                <div class="col-6 py-auto mx-0 pr-1">
+                                    <button class="btn btn-succes btnGuardar ancho100 " type="submit">GUARDAR</button>
+                                </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+                </div>
+        </main>
+
+        <script src="" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </body>
+    
+</html>

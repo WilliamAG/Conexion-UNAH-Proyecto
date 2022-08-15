@@ -1,0 +1,53 @@
+
+ .ancho100 {
+     width: 100% !important;
+ }
+ 
+ 
+
+ .card {
+     background-color: rgba(255, 255, 255, 0.772);
+     color: rgb(12, 12, 12);
+     border-radius: 0px;
+ }
+ 
+ .centrado{
+     margin-left: auto;
+     margin-right: auto;
+   }
+ 
+ 
+ .table {
+     color: rgb(4, 76, 163);
+ }
+ 
+ .btnImprimir {
+     background-color: rgb(58, 169, 24);
+     border-radius: 20px;
+     color: white;
+ }
+ 
+ .btnGuardar {
+     background-color: rgb(58, 169, 24);
+     border-radius: 20px;
+     color: white;
+ }
+ 
+ .titulo {
+     background-color: rgb(4, 76, 163);
+     color: white;
+     border-radius: 20px;
+     text-align: center !important;
+ }
+ 
+ .conT {
+     text-align: center !important;
+ }
+ 
+ .fa-solid {
+    color: rgba(255, 157, 0, 0.735);
+ }
+
+ td > input { height: 20px;
+              
+            }

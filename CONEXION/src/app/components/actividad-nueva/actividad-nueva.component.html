@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="text-center mt-3">
+        <h4 *ngIf="!edit" >CREAR ACTIVIDAD</h4>
+        <h4 *ngIf="edit" >EDITAR ACTIVIDAD</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="form-actividad col">
+            <p><b> Ingrese la siguiente informacion:</b></p>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Ingrese el nombre de la actividad" formControlName="nombre">
+                </div>
+                <label>Area del conocimiento</label>
+
+                <div>
+                    <select class="form-select mb-2" aria-label="Default select example" formControlName="area">
+                        <option value="academica">Academico-Cientifica</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="deportiva">Deportiva</option>
+                        <option value="social">Social</option>
+                    </select>
+
+                    <div class="mb-3">
+                        <input type="number" class="form-control" placeholder="Horas Art. 140" formControlName="horasArt">
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label">Descrpcion</label>
+                    <textarea class="form-control" rows="3" formControlName="descripcion"></textarea>
+                </div>
+                <label>Modalidad de la Activdad</label>
+                <div>
+                    <select class="form-select mb-2" formControlName="modalidad">
+                        <option value="presencial">Presencial</option>
+                        <option value="virtual">Virtual</option>
+                    </select>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Direccion o plataforma" formControlName="direccionPlataforma">
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="hola">Fecha y hora</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="date" class="form-control" formControlName="fecha">
+                        </div>
+                        <div class="col-6">
+                            <input type="time" class="form-control" formControlName="hora">
+                        </div>
+                    </div>
+                </div>
+
+                <label>Organizadores</label>
+                <div class="mb-3">
+                    <input type="text" class="form-control mb-2" placeholder="Facultad" formControlName="facultad">
+                    <input type="text" class="form-control" placeholder="Encargados" formControlName="encargados">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Imagen</label>
+                    <input type="file" class="form-control" placeholder="Ingrese el nombre de la actividad" (change)="onFileChange($event)">
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" formControlName="terminos">
+                    <label class="form-check-label">Acepto los terminos y que la informacion
+                        brindada es
+                        real.</label>
+                </div>
+                <div class="d-flex justify-content-evenly">
+                    <button [disabled]="!this.form.valid" type="submit" class="btn btn-success mr-4">Guardar</button>
+                    <button type="button" class="btn btn-danger">Descartar</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+
+</div>

@@ -1,0 +1,47 @@
+.container {
+    color: #3c7a97;
+  }
+  
+  .card {
+    border-radius: 20px;
+    background-color: #a0b3c255;
+    border: none;
+  }
+  
+  .card:hover {
+      background-color: #e8f6fc8b;
+      cursor: auto;
+  }
+  
+  .title-section p {
+    color: #225477;
+    font-weight: bold;
+    font-size: 1.4rem;
+  
+  }
+  .card-title {
+    color: #225477;
+  }
+  
+  .content {
+      font-weight: 400;
+  }
+  
+  p {
+    font-size: small;
+  }
+  
+  .btn {
+    border-radius: 20px;
+    height: 30px;
+    width: 40%;
+  }
+  .btn-warning {
+    background-color: #fbfa4f;
+    border-color: #fbfa4f;
+  }
+  
+  img {
+    border-radius: 15px;
+  }
+  

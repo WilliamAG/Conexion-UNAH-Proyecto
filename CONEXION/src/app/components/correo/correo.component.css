@@ -1,0 +1,29 @@
+img {
+
+	width: 100%;
+	height: 750px;
+}
+
+.btn-amarillo{
+    color: #065471;
+    background-color: #ffcd6a;
+    font-weight: bolder;
+    border-radius: 20px;
+    border-color: #ffcd6a;
+    position: absolute;
+    left: 42%;
+    top: 460px;
+    width: 236px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#logo_correo img{
+    position: absolute;
+    width: 490px;
+    height: 400px;
+    top: 2px;
+    left: 33%;
+
+}

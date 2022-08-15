@@ -1,0 +1,22 @@
+.titulo-login{
+    font-size: 1.1rem;
+}
+.spam-act{
+    text-align: left!important;
+    margin-right: auto;
+    font-size: 0.9rem;
+    color: rgb(70, 67, 67);
+}
+.img-inicio{
+    width: fit-content;
+    width: 100%;
+    margin-bottom: 0%;
+    margin-right: 0%;
+}
+.bg{
+    background-image: url(../../../assets/img/inicio-sesion/happy.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+}

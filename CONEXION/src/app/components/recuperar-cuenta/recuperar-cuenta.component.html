@@ -1,0 +1,29 @@
+<div class="container text-center">
+    <img src="../../../assets/img/logo_transparent.png" height="250" alt="" class="src">
+    <div>
+        <p class="m-0 fw-bold fs-4">
+            RECUPERAR ACCESO
+        </p>
+        <p class="m-0">
+            Ingrese su informacion para comenzar
+        </p>
+        <p class="mt-3 text-muted">
+            SE LE ENVIARA UN CORREO PARA RECUPERAR EL ACCESO A SU CUENTA
+        </p>
+    </div>
+
+    <form [formGroup]="changePass" (ngSubmit)="sendPass()">
+        <div class="mb-3">
+            <input class="" type="text" placeholder="Correo Institucional" formControlName="email">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">ENVIAR</button>
+        </div>
+    </form>
+
+    <p class="mt-3 text-muted text-decoration-underline">
+        SE LE ENVIO UNA CONTRASENA PROVICIONAL AL CORREO
+    </p>
+
+
+</div>

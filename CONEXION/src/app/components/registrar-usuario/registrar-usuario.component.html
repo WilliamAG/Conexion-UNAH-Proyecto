@@ -1,0 +1,165 @@
+<div class="container mt-5 div-registro">
+    <div class="row">
+      <div class="col-lg-6 div-formulario">
+        <div class="card-body">
+          <div class="img-log"> <img src="../../../assets/img/logo_transparent.png"  class="img-log" alt=""></div>
+          <h2 class="titulo text-center titulo-lista"> {{titulo}}</h2>
+          
+          
+          <form class="cuerpo-formulario mt-3" [formGroup]="usuarioForm" (ngSubmit)="agregarUsuario()">
+              <div class="mb-3">
+                  <label for="dni" class="form-label">DNI</label>
+                  <input type="text" class="form-control" id="dni" formControlName="dni" placeholder="0000199900000" pattern="(0|1)[0-9]{3}((19[0-9]{2})|(20[0|1])\d{1})[0-9]{5}"/>
+                  <div class="text-danger"
+                  *ngIf="usuarioForm.controls['dni'].hasError('required')  && usuarioForm.controls['dni'].touched">
+                      <span>El numero de identidad <strong>es obligatorio.</strong></span>
+                  </div>
+                  <div class="text-warning"
+                   *ngIf="usuarioForm.controls['dni'].hasError('pattern')">
+                  <span>El numero de identidas<strong>no es correcto.</strong></span>
+                </div>
+              </div>
+               
+              <div class="mb-3">
+              <label for="nombre" class="form-label" >Nombres</label>
+              <input type="text" class="form-control" id="nombre" formControlName="nombre" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" placeholder="Jose"/>
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['nombre'].hasError('required') && usuarioForm.controls['nombre'].touched">
+                  <span>El nombre <strong>es obligatorio.</strong></span>
+              </div>
+              <div class="text-warning"
+              *ngIf="usuarioForm.controls['nombre'].hasError('pattern') && usuarioForm.controls['nombre'].touched">
+                  <span>El nombre<strong> es incorrecto. Ejemplo: Rue</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="apellido" formControlName="apellido" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" placeholder="Trinidad Reyes"/>
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['apellido'].hasError('required') && usuarioForm.controls['apellido'].touched">
+                  <span>El apellido <strong>es obligatorio.</strong></span>
+              </div>
+              <div class="text-warning"
+                 *ngIf="usuarioForm.controls['apellido'].hasError('pattern')">
+                  <span>El apellido<strong>es incorrecto. Ejemplo: Cruz</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Telefono</label>
+              <input type="number" class="form-control" id="telefono" formControlName="telefono" pattern="^[2,3,8,9]{1}[0-9]{7}" placeholder="32210000"/>
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['telefono'].hasError('required')  && usuarioForm.controls['telefono'].touched">
+                  <span>El telefono <strong>es obligatorio.</strong></span>
+              </div>
+              <div class="text-warning"
+                 *ngIf="usuarioForm.controls['telefono'].hasError('pattern')">
+                  <span>El numero telefonico<strong>no es valido. Ejemplo: 32000000</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="nacimiento" formControlName="nacimiento" max="2009-12-31" min="1930-12-31" value="01/01/1999"/>
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['nacimiento'].hasError('required')  && usuarioForm.controls['nacimiento'].touched">
+                  <span>La fecha de nacimiento <strong>es obligatorio.</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="facultad" class="form-label">Facultad</label>
+              <select class="form-control form-select-sm" id="facultad" formControlName="facultad">
+                  <option value="CS">Ciencias de la Salud</option>
+                  <option value="IO">Ingenieria</option>
+                  <option value="LL">Letras</option>
+                </select>
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['facultad'].hasError('required')  && usuarioForm.controls['facultad'].touched">
+                  <span>La facultad <strong>es obligatorio.</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="carrera" class="form-label">Carrera que pertenece</label>
+              <select class="form-control form-select-sm" id="carrera" formControlName="carrera">
+                  <option value="IS">Ingenieria en Sistemas</option>
+                  <option value="IC">Ingenieria Civil</option>
+                  <option value="IM">Ingenieria Mecanica</option>
+                </select>
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['carrera'].hasError('required')  && usuarioForm.controls['carrera'].touched">
+                  <span>Su carrera <strong>es obligatorio.</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="cuenta" class="form-label">Numero de cuenta</label>
+              <input type="number" class="form-control" id="cuenta" formControlName="cuenta" min="0" pattern="((20)[0-9]{2}[1|2|3]{1}[0-9]{6})|[0-9]{6}" />
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['cuenta'].hasError('required')  && usuarioForm.controls['cuenta'].touched">
+                  <span>El numero de cuenta <strong>es obligatorio.</strong></span>
+              </div>
+              <div class="text-warning"
+              *ngIf="usuarioForm.controls['cuenta'].hasError('pattern')  && usuarioForm.controls['cuenta'].touched">
+                  <span>La cuenta o numero de empleado<strong>incorrecta.</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="rol" class="form-label">Estudiante o Docente</label>
+              <select class="form-control form-select-sm" id="rol" formControlName="rol">
+                  <option value="A">Estudiante</option>
+                  <option value="B">Docente</option>
+                  <option value="C">VOAE</option>
+                </select>
+              
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['rol'].hasError('required')  && usuarioForm.controls['rol'].touched">
+                  <span>Su rol <strong>es obligatorio.</strong></span>
+              </div>
+            </div>      
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo Institucional</label>
+              <input type="email" class="form-control" id="correo" formControlName="correo" pattern="[A-z]{5,}@(unah\.)(edu\.hn|hn)$"/>
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['correo'].hasError('required')  && usuarioForm.controls['correo'].touched">
+                  <span>El correo institucional <strong>es obligatorio.</strong></span>
+              </div>
+
+              <div class="text-warning"
+              *ngIf="usuarioForm.controls['correo'].hasError('pattern')  && usuarioForm.controls['correo'].touched">
+                  <span>El correo institucional <strong>no es correcto.</strong></span>
+              </div>
+            
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Constraseña</label>
+              <input type="password" class="form-control" id="password" formControlName="password" placeholder="Mayor de 6 caracteres, use Mayusculas, un digito y 1 caracter especial">
+              <div class="text-danger"
+              *ngIf="usuarioForm.controls['password'].hasError('required') && usuarioForm.controls['password'].touched">
+                  <span>La constraseña <strong>es obligatorio.</strong></span>
+              </div>
+            </div>
+  
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="guardar" />
+              <label class="form-check-label" for="guardar">Acepta los terminos y condiciones</label>
+            </div>
+  
+            <div class="mb-3 form-check">
+              <button type="submit" class="btn btn-secondary btn-lg float-start" routerLink="/">Volver</button>
+              <button type="submit" [disabled]="usuarioForm.invalid" class="btn btn-success btn-lg float-end">Guardar</button>
+            </div>
+            
+          </form>
+        </div>
+      
+  
+     
+      </div>
+  
+       <!-- //ANOTHER -->
+       <div class="col-lg-6">
+          <img class="media1 d-flex mr-3" src="../../../assets/img/registro-usuario/voluntariado3.jpg" alt="Generic placeholder image">
+      
+      </div>
+  
+          
+    </div>
+  </div>
+  

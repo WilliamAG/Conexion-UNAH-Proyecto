@@ -1,0 +1,48 @@
+.container {
+  color: #164764;
+  min-height: 85vh;
+}
+
+.card {
+  font-size: 1.1rem;
+  border-radius: 20px;
+  background-color: #f3dca6;
+  border: none;
+}
+
+.card:hover {
+  background-color: #e3cd99;
+  cursor: auto;
+}
+
+.title-section p {
+  /* color: #F7CD6B; */
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.card-title {
+  color: #225477;
+}
+
+.content {
+  font-weight: 400;
+}
+
+p {
+  font-size: small;
+}
+
+.btn {
+  border-radius: 12px;
+  /* height: 30px; */
+  /* width: 40%; */
+}
+
+img {
+  border-radius: 15px;
+}
+
+.modal-body {
+  padding: 10px;
+  font-size: large;
+}

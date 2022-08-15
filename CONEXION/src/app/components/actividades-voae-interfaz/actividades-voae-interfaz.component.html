@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="title-section m-3">
+        <p class="text-center">ACTIVIDADES VOAE</p>
+    </div>
+
+    <div *ngFor="let actividad of actividades" class="card mb-4">
+        <h5 class="card-header">{{ actividad.area | uppercase}}</h5>
+        <div class="card-body row">
+            <div class="col-4 d-flex flex-column justify-content-start">
+                <img [src]="actividad.urlImagen" alt="imagen" width="350">
+            </div>
+            <div class="col-8 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="mb-3">
+                        <h5 class="card-title"><b><i>{{actividad.nombre | titlecase}} </i></b> </h5>
+                        <small class="card-text"><b>Descripcion: </b> {{actividad.descripcion | titlecase}}</small>
+                    </div>
+
+                    <div class="mb-3 d-flex flex-column">
+                        <small class="card-text"><b>Modalidad:</b> {{actividad.modalidad | titlecase}}</small>
+                        <small class="card-text"> <b>Direccion o Plataforma:</b> {{actividad.direccionPlataforma |
+                            titlecase}}</small>
+                    </div>
+
+
+                    <div class="mb-3 d-flex flex-column">
+                        <small class="card-text"><b>Fecha:</b> {{actividad.fecha | date}}</small>
+                        <small class="card-text"> <b>Hora:</b> {{actividad.hora}}</small>
+                    </div>
+
+                    <div class="d-flex flex-column">
+                        <small class="card-text"> <b>Encargado:</b> {{actividad.encargados | titlecase}}</small>
+                        <small class="card-text"><b>Art.140 Horas:</b> {{actividad.horasArt}} Hras</small>
+                    </div>
+
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <!-- Delete Button -->
+                    <button class="btn btn-danger"
+                        (click)="eliminarActividad(actividad._id!, actividad.nombre!)">Eliminar</button>
+                    <!-- Edit Button -->
+                    <button class="btn btn-primary mx-2" (click)="editarActividad(actividad._id!)">Editar</button>
+                    <!-- Users Button -->
+                    <button (click)="obtenerUsuariosActividad(actividad._id!)" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Lista de Usuarios Registrados</h5>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Cuenta</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Carrera</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let usuario of usuariosActividad; index as i">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{usuario.nombre}}</td>
+                                    <td>{{usuario.apellido}}</td>
+                                    <td>{{usuario.cuenta}}</td>
+                                    <td>{{usuario.correo}}</td>
+                                    <td>{{usuario.carrera}}</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

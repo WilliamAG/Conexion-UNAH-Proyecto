@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+
+</header>
+<body id="content">
+
+  <nav class="navbar nav-azul">
+    <div class="container-fluid nav-azul px-5">
+      <a class="navbar-brand titulo-amarillo" href="">
+        <h3 class="ml-4"> 
+          <!-- <img src="../assets/img/logo_transparent.png" alt="" width="75" height="54" class="d-inline-block align-text-top"> -->
+          <i class="fa-solid fa-bars px-3"></i>  CONEXION UNAH</h3>
+      </a>
+
+      <!--<ng-component *ngIf="!authService.loggedIn(); else "> -->
+        <button type="button" routerLink="/login" routerLinkActive="active" class="ml-5 btn btn-dark btn-lg btn-amarillo">Iniciar sessión</button>
+       <button type="submit" routerLink="/login" routerLinkActive="active" class="btn btn-lg btn-success" (click)="authService.logout()">Cerrar</button>
+  
+      <!-- </ng-component>
+      <ng-template #loggedIn>
+        
+      </ng-template> -->
+
+    </div>
+    
+  </nav>
+
+  <h1>
+    <router-outlet></router-outlet>
+  </h1>
+</body>
+
+<footer class="footer-azul" >
+<br><h3>&copy; ZIKA CORPORATION</h3><br>
+</footer>
+
+</html>
