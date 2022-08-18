@@ -38,4 +38,8 @@ export class ActividadService {
   getActividades(): Observable<ActividadInterface[]> {
     return this.http.get<ActividadInterface[]>(this.url + '/obtener');
   }
+
+  postInscribirActividad(idActividad: string, idUsuario: string): Observable<any> {
+    return this.http.post(this.url + `/${idActividad}/${idUsuario}`, {});
+  }
 }

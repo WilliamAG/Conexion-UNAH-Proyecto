@@ -33,4 +33,31 @@ listActividad: ActividadInterface[]=[];
     })
   }
 
+  InscribirActividad(id: any) {
+    const idUser: string = localStorage.getItem('id')!;
+    Swal.fire({
+      title: '¿Desea Inscribirse a esta Actividad?',
+      text: '¡No podras revertir esto!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, inscribirme!',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.value) {
+        this._actividadService
+          .postInscribirActividad(id, idUser)
+          .subscribe((data) => {
+            Swal.fire(
+              'Inscrito!',
+              'Te has inscrito a la actividad correctamente.',
+              'success'
+            );
+            this.ObtenerActividad();
+          });
+      }
+    });
+  }
+
 }
