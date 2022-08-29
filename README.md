@@ -1,4 +1,4 @@
-# Conexion-UNAH-Proyecto
+# Conexion_UNAH_Proyecto
 Proyecto final de la clase de Ingeniería de Software
 
 Aplicación Web basada en la gestión de actividades VOEA-UNAH para el cumplimiento de Horas del artículo 140 como requisito de graduación.
